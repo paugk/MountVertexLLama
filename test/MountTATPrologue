@@ -1,0 +1,95 @@
+#!/bin/bash
+# $Id: MountTATPrologue 192598 2013-07-18 16:45:07Z rmarson $
+#
+# Copyright (C) 2005
+# Associated Universities, Inc. Washington DC, USA.
+#
+# Produced for the ALMA project
+#
+# This library is free software; you can redistribute it and/or modify
+# it under the terms of the GNU Library General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# Library General Public License for more details.
+#
+# You should have received a copy of the GNU Library General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 675 Massachusetts Ave, Cambridge, MA 02139, USA.
+#
+# Correspondence concerning ALMA should be addressed as follows:
+# Internet email: alma-sw-admin@nrao.edu
+#
+
+if [ X"$1" == X ]
+then
+ACS_CDB=`pwd`
+else
+ACS_CDB=$1
+fi
+
+echo "CDB=>$ACS_CDB" &> /tmp/Danilo
+
+# To be sure, deletes the recovery file before starting
+if [ -e $ACS_TMP ]; then
+    rm -rf $ACS_TMP >& /dev/null
+fi
+mkdir $ACS_TMP
+
+IFRsToLoad="$INTROOT/idl/TMCDBComponent.idl \
+            $INTROOT/idl/MonitorInterface.idl \
+            $INTROOT/idl/AlarmService.idl \
+            $INTROOT/idl/Antenna.idl \
+            $INTROOT/idl/ArrayTime.idl \
+            $INTROOT/idl/PTC.idl \
+            $INTROOT/idl/PTCBase.idl \
+            $INTROOT/idl/MountError.idl \
+            $INTROOT/idl/Mount.idl \
+            $INTROOT/idl/MountBase.idl \
+            $INTROOT/idl/MountVertexPrototype.idl \
+            $INTROOT/idl/MountVertexPrototypeBase.idl \
+            $INTROOT/idl/MountCommon.idl \
+            $INTROOT/idl/MountCommonBase.idl \
+#            $INTROOT/idl/MountAlcatelPrototype.idl \
+#            $INTROOT/idl/MountAlcatelPrototypeBase.idl \
+            $INTROOT/idl/MountProduction.idl \
+            $INTROOT/idl/MountProductionBase.idl \
+            $INTROOT/idl/MountVertex.idl \
+            $INTROOT/idl/MountVertexBase.idl \
+#            $INTROOT/idl/MountAEM.idl \
+#            $INTROOT/idl/MountAEMBase.idl \
+#            $INTROOT/idl/MountACA.idl \
+#            $INTROOT/idl/MountACABase.idl \
+            $INTROOT/idl/MountVertexLLama.idl \
+            $INTROOT/idl/MountVertexLLamaBase.idl"
+
+acsutilTATPrologue -l
+# Start Container
+# The redirection of stderr to a log file should not be necessary.
+# This has been fixed after ACS 5.0.1
+
+# This container will be used to deploy the Mount component 
+acsutilBlock -f $ACS_TMP/CONTROL_Test_cppContainer.log -b "components activated." -x acsStartContainer -cpp CONTROL/DV02/cppContainer 2> $ACS_TMP/CONTROL_Test_cppContainerError.log
+
+acsutilBlock -f $ACS_TMP/pyContainer.log -b "components activated." -x acsStartContainer -py pyContainer 2> $ACS_TMP/pyContainerError.log
+
+acsutilBlock -f $ACS_TMP/javaContainer.log -b "components activated." -x acsStartContainer -java javaContainer 2> $ACS_TMP/javaContainerError.log
+
+# This will be use to deploy the lkmLoader component
+#acsutilBlock -f $ACS_TMP/CONTROL_Test_cppContainer1.log -b "components activated." -x acsStartContainer -cpp CONTROL/DV02/cppContainer1 2> $ACS_TMP/CONTROL_Test_cppContainerError1.log
+
+# Start simulator
+# With ACS 5.0.1 it is necessary to start the simulator
+# before calling acsutilBlock, in order to store 
+# the PID in a file.
+# The version now archived on the head also stores
+# the PID in a file and therefore 
+# this will also become a single line.
+#TEMPLOG=$ACS_TMP/ABMLBSimulator.log
+#AMBLBSimulator >& $TEMPLOG&
+#PID=$!
+#echo $PID > $ACS_TMP/simulator.pid
+#acsutilBlock -f $TEMPLOG -p $PID -b "AMBLBSimulator Ready"

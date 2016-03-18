@@ -1,0 +1,12 @@
+ --endorsed --maxHeapSize 512m -D jacorb.poa.thread_pool_max=200 -D jacorb.connection.client.pending_reply_timeout=30000 -D ACS.cdbpath=/home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/../config/CDB/schemas:/home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/CDB/schemas:/home/almamgr/INTROOT/config/CDB/schemas:/alma/ACS-2014.4/ACSSW/config/CDB/schemas -- com.cosylab.cdb.jdal.Server -jacorb -root /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test -OAIAddr 127.0.0.1 -OAport 3012 -n
+2015-09-30T20:45:57.911 INFO [acsStartJava] Starting Java application: com.cosylab.cdb.jdal.Server -jacorb -root /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test -OAIAddr 127.0.0.1 -OAport 3012 -n
+2015-09-30T20:45:57.927 INFO [acsStartJava] Using endorsed jar files in: -Djava.endorsed.dirs=../lib/endorsed:/home/almamgr/INTROOT/lib/endorsed:/alma/ACS-2014.4/ACSSW/lib/endorsed:/alma/ACS-2014.4/JacORB/lib/endorsed:
+2015-09-30T20:45:59.848 INFO [alma.acs.logging] Logger jacorb@CDB created with custom log levels local=Info, remote=Info to avoid log jams due to careless default log level settings.
+2015-09-30T20:46:00.114 INFO [CDB] DALImpl will use XSD caching for xerces sax parser ? false
+2015-09-30T20:46:00.116 NOTICE [CDB] ERROR: java.lang.IllegalArgumentException: CDB directory '/home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/CDB' does not exist.
+java.lang.IllegalArgumentException: CDB directory '/home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/CDB' does not exist.
+	at com.cosylab.cdb.jdal.DALImpl.<init>(DALImpl.java:217)
+	at com.cosylab.cdb.jdal.WDALBaseImpl.<init>(WDALBaseImpl.java:61)
+	at com.cosylab.cdb.jdal.WDALImpl.<init>(WDALImpl.java:92)
+	at com.cosylab.cdb.jdal.Server.run(Server.java:175)
+	at com.cosylab.cdb.jdal.Server.main(Server.java:64)

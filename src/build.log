@@ -1,0 +1,104 @@
+Generating MountVertexLLama
+java -classpath /home/almamgr/INTROOT/lib/ControlGenHwDevice/lib/ControlGenHwDevice.jar:/home/almamgr/INTROOT/lib/ControlGenHwDevice:/home/almamgr/INTROOT/lib/ControlGenHwDevice/config/templates:/home/almamgr/INTROOT/lib/ControlGenHwDevice/config/workflow:/home/almamgr/INTROOT/lib/ControlGenHwDevice/lib/antlr.jar:/home/almamgr/INTROOT/lib/ControlGenHwDevice/lib/asdmIDLTypes.jar:/home/almamgr/INTROOT/lib/ControlGenHwDevice/lib/asdmRuntime.jar:/home/almamgr/INTROOT/lib/ControlGenHwDevice/lib/commons-cli-1.0.jar:/home/almamgr/INTROOT/lib/ControlGenHwDevice/lib/commons-lang-2.1.jar:/home/almamgr/INTROOT/lib/ControlGenHwDevice/lib/commons-logging.jar:/home/almamgr/INTROOT/lib/ControlGenHwDevice/lib/log4j-1.2.8.jar:/home/almamgr/INTROOT/lib/ControlGenHwDevice/lib/maciSchemaBindings.jar:/home/almamgr/INTROOT/lib/ControlGenHwDevice/lib/oaw411.jar:/home/almamgr/INTROOT/lib/ControlGenHwDevice/lib/oaw411beta.jar:/home/almamgr/INTROOT/lib/ControlGenHwDevice/lib/ojdbc14.jar alma.buildtime.gen.LinuxGen MountVertexLLama
+The type of the device was not specified. Default to AMB Device.
+>>>>>GenHwDevice.main Starting code generation for device MountVertexLLama
+>>>>>GenHwDevice.main Starting WorkflowRunner
+HwDeviceWorkflowInitializer.setDeviceDir setDeviceDir = ..
+HwDeviceWorkflowInitializer.setDeviceDir setSpreadsheetDir = ../idl
+HwDeviceWorkflowInitializer.setDeviceDir setGeneratedDir = ../..
+HwDeviceWorkflowInitializer.setMonitorDBOnly = false
+HwDeviceWorkflowInitializer.setGenerateAlt = false
+HwDeviceWorkflowInitializer.setModelSlot = model
+0    [main] WARN  org.openarchitectureware.workflow.WorkflowRunner  - Parameter 'dumpFile' not specified. Dump file will not be written.
+HwDeviceWorkflowInitializer.invoke started.
+Spreadsheet DeviceModel has been validated.
+DeviceModel: Initialization complete.
+HwDeviceWorkflowInitializer completed.
+Code generation for MountVertexLLama done.
+ . . . code generation done
+make[1]: Entering directory `/home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/src'
+== Dependencies C++: ../object/MountVertexLLamaCompSimImplSS.d
+== Dependencies C++: ../object/MountVertexLLamaCompSimBase.d
+== Dependencies C++: ../object/MountVertexLLamaCompSimImpl2.d
+== Dependencies C++: ../object/MountVertexLLamaImpl.d
+== Dependencies C++: ../object/MountVertexLLamaBase.d
+== Dependencies C++: ../object/MountVertexLLamaHWSimImpl.d
+== Dependencies C++: ../object/MountVertexLLamaHWSimBase.d
+== IDL Compiling for TAO (C++): MountVertexLLamaCompSimBase
+processing /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/src/../idl/MountVertexLLamaCompSimBase.idl
+GPERF: Automatically changing to -S1 switch option
+== Dependencies for generated code: ../object/MountVertexLLamaCompSimBaseC.d
+== Dependencies for generated code: ../object/MountVertexLLamaCompSimBaseS.d
+== IDL Compiling for TAO (C++): MountVertexLLama
+processing /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/src/../idl/MountVertexLLama.idl
+GPERF: Automatically changing to -S1 switch option
+== Dependencies for generated code: ../object/MountVertexLLamaC.d
+== Dependencies for generated code: ../object/MountVertexLLamaS.d
+== IDL Compiling for TAO (C++): MountVertexLLamaBase
+processing /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/src/../idl/MountVertexLLamaBase.idl
+GPERF: Automatically changing to -S1 switch option
+== Dependencies for generated code: ../object/MountVertexLLamaBaseC.d
+== Dependencies for generated code: ../object/MountVertexLLamaBaseS.d
+make[1]: Leaving directory `/home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/src'
+make[1]: Entering directory `/home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/src'
+== Dependencies C++: ../object/MountVertexLLamaCompSimImplSS.d
+== Dependencies C++: ../object/MountVertexLLamaCompSimBase.d
+== Dependencies C++: ../object/MountVertexLLamaCompSimImpl2.d
+== Dependencies C++: ../object/MountVertexLLamaImpl.d
+== Dependencies C++: ../object/MountVertexLLamaBase.d
+== Dependencies for generated code: ../object/MountVertexLLamaCompSimBaseC.d
+== Dependencies for generated code: ../object/MountVertexLLamaCompSimBaseS.d
+make[1]: Leaving directory `/home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/src'
+make[1]: Entering directory `/home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/src'
+== checking IDL for Interface Repository ==
+2016-03-04T16:43:19.629 INFO [acsstartupLoadIFR] Loading files passed on the command line:  ../idl/MountVertexLLamaBase.idl
+2016-03-04T16:45:57.079 INFO [acsstartupLoadIFR] Checking of IDL interfaces in Interface Repository completed OK
+== IDL Compiling for OmniOrb (Python): MountVertexLLamaBase
+== (preprocessing) MountVertexLLamaBase
+== IDL Compiling for JacORB (Java): MountVertexLLamaBase 
+== Updating jarfile MountVertexLLamaBase from  ../object/MountVertexLLamaBase/src
+== C++ Compiling generated code: MountVertexLLamaBaseS.cpp
+== C++ Compiling generated code: MountVertexLLamaBaseC.cpp
+== Making library: ../lib/libMountVertexLLamaBaseStubs.a
+== Making library: ../lib/libMountVertexLLamaBaseStubs.so
+== checking IDL for Interface Repository ==
+2016-03-04T16:46:13.795 INFO [acsstartupLoadIFR] Loading files passed on the command line:  ../idl/MountVertexLLama.idl
+2016-03-04T16:48:52.141 INFO [acsstartupLoadIFR] Checking of IDL interfaces in Interface Repository completed OK
+== IDL Compiling for OmniOrb (Python): MountVertexLLama
+== (preprocessing) MountVertexLLama
+== IDL Compiling for JacORB (Java): MountVertexLLama 
+== Updating jarfile MountVertexLLama from  ../object/MountVertexLLama/src
+== C++ Compiling generated code: MountVertexLLamaS.cpp
+== C++ Compiling generated code: MountVertexLLamaC.cpp
+== Making library: ../lib/libMountVertexLLamaStubs.a
+== Making library: ../lib/libMountVertexLLamaStubs.so
+== checking IDL for Interface Repository ==
+2016-03-04T16:49:07.104 INFO [acsstartupLoadIFR] Loading files passed on the command line:  ../idl/MountVertexLLamaCompSimBase.idl
+2016-03-04T16:51:44.760 INFO [acsstartupLoadIFR] Checking of IDL interfaces in Interface Repository completed OK
+== IDL Compiling for OmniOrb (Python): MountVertexLLamaCompSimBase
+== (preprocessing) MountVertexLLamaCompSimBase
+== IDL Compiling for JacORB (Java): MountVertexLLamaCompSimBase 
+== Updating jarfile MountVertexLLamaCompSimBase from  ../object/MountVertexLLamaCompSimBase/src
+== C++ Compiling generated code: MountVertexLLamaCompSimBaseS.cpp
+== C++ Compiling generated code: MountVertexLLamaCompSimBaseC.cpp
+== Making library: ../lib/libMountVertexLLamaCompSimBaseStubs.a
+== Making library: ../lib/libMountVertexLLamaCompSimBaseStubs.so
+== C++ Compiling: MountVertexLLamaHWSimBase.cpp
+== C++ Compiling: MountVertexLLamaHWSimImpl.cpp
+== Making library: ../lib/libMountVertexLLamaHWSim.a
+== Making library: ../lib/libMountVertexLLamaHWSim.so
+== C++ Compiling: MountVertexLLamaBase.cpp
+== C++ Compiling: MountVertexLLamaImpl.cpp
+== Making library: ../lib/libMountVertexLLama.a
+== Making library: ../lib/libMountVertexLLama.so
+== C++ Compiling: MountVertexLLamaCompSimBase.cpp
+== C++ Compiling: MountVertexLLamaCompSimImpl2.cpp
+== Making library: ../lib/libMountVertexLLamaCompSim.a
+== Making library: ../lib/libMountVertexLLamaCompSim.so
+== C++ Compiling: MountVertexLLamaCompSimImplSS.cpp
+== Making library: ../lib/libMountVertexLLamaCompSimSS.a
+== Making library: ../lib/libMountVertexLLamaCompSimSS.so
+== Making python package: ../lib/python/site-packages/CCL
+make[1]: Leaving directory `/home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/src'
+ . . . 'Compile' done
+ . . . 'all' done

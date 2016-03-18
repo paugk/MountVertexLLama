@@ -1,0 +1,22 @@
+1 - 2015-09-30T18:59:22.000 Python Client: initialized by almamgr@llama __importComponentStubs - Unable to import 'CONTROL/Mount' component's module: Component type unavailable!
+1 - E
+1 - ======================================================================
+1 - ERROR: test_CONTROLLifeCycle (__main__.TestCase)
+1 - ----------------------------------------------------------------------
+1 - Traceback (most recent call last):
+1 -   File "/home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/MountTATEnduranceCONTROLLifeCycle.py", line 41, in test_CONTROLLifeCycle
+1 -     self.check_CONTROLLifeCycle("CONTROL/Mount",100)
+1 -   File "/home/almamgr/INTROOT/lib/python/site-packages/PyUCommonTestCases.py", line 170, in check_CONTROLLifeCycle
+1 -     self.reference=self.client.getComponent(self.name)
+1 -   File "/alma/ACS-2014.4/ACSSW/lib/python/site-packages/Acspy/Servants/ContainerServices.py", line 230, in getComponent
+1 -     comp_class = self.__importComponentStubs(comp_name, comp_idl_type)
+1 -   File "/alma/ACS-2014.4/ACSSW/lib/python/site-packages/Acspy/Servants/ContainerServices.py", line 293, in __importComponentStubs
+1 -     raise ex
+1 - 2015-09-30T18:59:22.014 Python Client: initialized by almamgr@llama disconnect - Disconnect called for client
+1 - CannotGetComponentExImpl: maciErrTypeImpl.CannotGetComponentExImpl(errorTrace=Acspy.Common.ErrorTrace.ErrorTrace(file='/alma/ACS-2014.4/ACSSW/lib/python/site-packages/Acspy/Servants/ContainerServices.py', lineNum=289, routine='__importComponentStubs', host='llama', process='29033', thread='MainThread', timeStamp=136629323619968780L, sourceObject='Python Client: initialized by almamgr@llama', errorType=25L, errorCode=1L, severity=Error, shortDescription='Error retrieving component', data=[ACSErr.NameValue(name='Reason', value='Component type unavailable!')], previousError=[]))
+1 - 
+1 - Exception omniORB.CORBA.UNKNOWN: CORBA.UNKNOWN(0x0, CORBA.COMPLETED_NO) in <bound method TestCase.__del__ of <__main__.TestCase testMethod=test_CONTROLLifeCycle>> ignored
+1 - ----------------------------------------------------------------------
+1 - Ran 1 test in 0.157s
+1 - 
+1 - FAILED (errors=1)

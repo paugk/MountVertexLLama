@@ -1,0 +1,150 @@
+
+<html>
+    <body>
+
+<script language="javascript">
+function showme(funcName){
+   if( document.getElementById( funcName + "Cont").style.visibility == "hidden" ) {
+       document.getElementById( funcName + "Cont").innerHTML=window[ funcName + "Text"];
+       document.getElementById( funcName + "Cont").style.visibility = "visible";
+       show=true;
+   }
+   else {
+      document.getElementById( funcName + "Cont").innerHTML = "";
+      document.getElementById( funcName + "Cont").style.visibility = "hidden";
+      show=false;
+   }
+}
+</script>
+
+  <h1>Device Antenna Control Unit</h1>
+    <h2>Control Points</h2>
+<table>
+<tr><td>Function Name</td><td>RCA</td></tr>
+
+<tr>
+<td VALIGN=top>
+SET_SUBREF_DELTA_ROT
+</td>
+<td VALIGN=top>
+0x1026
+</td>
+<td>
+        <a href="javascript:showme('SET_SUBREF_DELTA_ROT')">details</a> <div id="SET_SUBREF_DELTA_ROTCont" style="visibility:hidden">
+      
+    <li><em>Assembly</em> MountVertexLLama
+    <li><em>Name</em> SUBREF_DELTA_ROT
+    <li><em>RCA</em> 0x1026
+    <li><em>RawDataType</em> int16
+    <li><em>TeRelated</em> false
+    <li><em>WorldDataType</em> short
+    <li><em>DataUnits</em> degree
+    <li><em>Scale</em> 1.0
+    <li><em>Offset</em> 0.0
+    <li><em>MinRange</em> none
+    <li><em>MaxRange</em> none
+    <li><em>Returns</em> void
+    <li><em>Parameter</em> default
+    <li><em>Data</em> parm
+    <li><em>Value</em> 0
+    <li><em>Mode</em> operational
+    <li><em>Implement</em> true
+    <li><em>External</em> true
+    <li><em>Description</em> Set the new subreflector delta position for the tilt axes (will not be accumulated to previous deltas). Delta positions can be commanded when S/R is in A UTO mode.
+      
+      <li><em>Is archived</em>
+      
+
+        </div>
+<script language="javascript">
+   var SET_SUBREF_DELTA_ROTText = document.getElementById("SET_SUBREF_DELTA_ROTCont").innerHTML;
+   document.getElementById("SET_SUBREF_DELTA_ROTCont").innerHTML = "";
+</script>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=top>
+SET_SUBREF_ROTATION
+</td>
+<td VALIGN=top>
+0x1028
+</td>
+<td>
+        <a href="javascript:showme('SET_SUBREF_ROTATION')">details</a> <div id="SET_SUBREF_ROTATIONCont" style="visibility:hidden">
+      
+    <li><em>Assembly</em> MountVertexLLama
+    <li><em>Name</em> SUBREF_ROTATION
+    <li><em>RCA</em> 0x1028
+    <li><em>RawDataType</em> int16
+    <li><em>TeRelated</em> false
+    <li><em>WorldDataType</em> short
+    <li><em>DataUnits</em> degree
+    <li><em>Scale</em> 1.0
+    <li><em>Offset</em> 0.0
+    <li><em>MinRange</em> none
+    <li><em>MaxRange</em> none
+    <li><em>Returns</em> void
+    <li><em>Parameter</em> default
+    <li><em>Data</em> parm
+    <li><em>Value</em> 0
+    <li><em>Mode</em> operational
+    <li><em>Implement</em> true
+    <li><em>External</em> false
+    <li><em>Description</em> Rotation control of subreflector.
+      
+      <li><em>Is archived</em>
+      
+
+        </div>
+<script language="javascript">
+   var SET_SUBREF_ROTATIONText = document.getElementById("SET_SUBREF_ROTATIONCont").innerHTML;
+   document.getElementById("SET_SUBREF_ROTATIONCont").innerHTML = "";
+</script>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=top>
+SET_SELFTEST_STOP
+</td>
+<td VALIGN=top>
+0x1032
+</td>
+<td>
+        <a href="javascript:showme('SET_SELFTEST_STOP')">details</a> <div id="SET_SELFTEST_STOPCont" style="visibility:hidden">
+      
+    <li><em>Assembly</em> MountVertexLLama
+    <li><em>Name</em> SELFTEST_STOP
+    <li><em>RCA</em> 0x1032
+    <li><em>RawDataType</em> ubyte
+    <li><em>TeRelated</em> false
+    <li><em>WorldDataType</em> ubyte
+    <li><em>DataUnits</em> none
+    <li><em>Scale</em> 1.0
+    <li><em>Offset</em> 0.0
+    <li><em>MinRange</em> none
+    <li><em>MaxRange</em> none
+    <li><em>Returns</em> void
+    <li><em>Parameter</em> void
+    <li><em>Data</em> fixed
+    <li><em>Value</em> 1
+    <li><em>Mode</em> operational
+    <li><em>Implement</em> true
+    <li><em>External</em> true
+    <li><em>Description</em> Terminate ongoing self test.
+      
+      <li><em>Is archived</em>
+      
+
+        </div>
+<script language="javascript">
+   var SET_SELFTEST_STOPText = document.getElementById("SET_SELFTEST_STOPCont").innerHTML;
+   document.getElementById("SET_SELFTEST_STOPCont").innerHTML = "";
+</script>
+</td>
+</tr>
+
+</table>
+  </body>
+</html>

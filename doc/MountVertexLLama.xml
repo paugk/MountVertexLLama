@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ * ALMA - Atacama Large Millimeter Array
+ * (c) European Southern Observatory, 2002
+ * (c) Associated Universities Inc., 2002
+ * Copyright by ESO (in the framework of the ALMA collaboration),
+ * Copyright by AUI (in the framework of the ALMA collaboration),
+ * All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY, without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ * MA 02111-1307  USA
+ *
+ * Warning!
+ *  =========================================================
+ * | This is generated code!  Do not modify this file.       |
+ * | Any changes will be lost when the file is re-generated. |
+ * | $Source: /diskb/tmp/stefano/project2/CVS/CONTROL/Common/GenHwDevice/config/templates/amb/CDBInstance.xpt,v $ |
+ *  =========================================================
+ *
+ * $Id: CDBInstance.xpt 199109 2013-12-18 18:37:52Z rmarson $
+ *
+-->
+<MountVertexLLamaBase xmlns="urn:schemas-cosylab-com:MountVertexLLamaBase:1.0"
+    xsi:schemaLocation="urn:schemas-cosylab-com:MountVertexLLamaBase:1.0 http://www.nrao.edu/schemas/CONTROL/MountVertexLLamaBase.xsd"
+      xmlns:amb="urn:schemas-cosylab-com:AmbDevice:1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <METR_DELTAS_DISP
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Get AZ and EL delta correction applied by the metrology system based on the readout of the sensors at the El encoder mounts"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <METR_DELTAS_SPEM
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Get AZ and EL delta correction applied by the metrology system based on the systematic error model"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <METR_DELTAS_TILT
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Get AZ and EL delta correction applied by the metrology system based on the readout of the tiltmeters"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <METR_DELTAS_TILTTEMP
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Get AZ and EL delta correction applied by the metrology system based on the model for temperature compensation of the tiltmeter offset (?tilt offset model?)"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <METR_TEMPS_19
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Get value of metrology temperature sensor pack 19"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <METR_TEMPS_1A
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Get value of metrology temperature sensor pack 1A"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <METR_TEMPS_1B
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Get value of metrology temperature sensor pack 1B"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <METR_TEMPS_1C
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Get value of metrology temperature sensor pack 1C"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <METR_TEMPS_1D
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Get value of metrology temperature sensor pack 1D"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <METR_TEMPS_1E
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Get value of metrology temperature sensor pack 1E"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <METR_TEMPS_1F
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Get value of metrology temperature sensor pack 1F"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <SUBREF_DELTA_ROT
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Subreflector rotation delta position."
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <OTHER_STATUS
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="Cabin and auxiliary status information. Conditions may be Fault conditions (F) or Status information (S). Each condition is marked below; fault conditions require the use of the CLEAR_FAULT_CMD to clear, while status information will clear when the hardware condition is cleared."
+    units="none"
+    min_timer_trig="0.048"
+
+    bitDescription=""
+    alarm_mask="0"
+    alarm_trigger="0"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <UPS2_ALARMS
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="UPS2 Alarm status of UPS system. Conditions may be fault conditions or status information. Fault conditions require the use of the CLEAR_FAULT_CMD to clear, while status information will clear when the hardware condition is cleared."
+    units="none"
+    min_timer_trig="0.048"
+
+    bitDescription=""
+    alarm_mask="0"
+    alarm_trigger="0"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <UPS2_BATTERY_OUTPUT
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="UPS 2 Battery voltage and current"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <UPS2_BATTERY_STATUS
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="UPS 2 Nominal battery autonomy"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <UPS2_BYPASS_VOLTS
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="UPS 2 Bypass voltages by phase"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <UPS2_FREQS
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="UPS 2 Bypass and inverter frequencies"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <UPS1_INVERTER_SW
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="UPS 1 Inverter switch position"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <UPS2_INVERTER_SW
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="UPS 2 Inverter switch position"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <UPS2_INVERTER_VOLTS
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="UPS 2 Inverter voltages by phase"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <UPS2_OUTPUT_CURRENT
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="UPS 2 Output currents by phase"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <UPS2_OUTPUT_VOLTS
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="UPS 2 Output voltages by phase"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <UPS_STATUS_1
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="UPS 1 Current status word"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+  <UPS_STATUS_2
+    archive_priority="15"
+
+    archive_min_int="300"
+    archive_max_int="300"
+
+    default_value="0"
+
+    format="%none"
+    description="UPS 2 Current status word"
+    units="none"
+    min_timer_trig="0.048"
+
+    min_delta_trig="1"
+
+    default_timer_trig="1"
+    resolution="1"
+    min_step="1"
+    alarm_timer_trig="0"
+    />
+
+    <Address
+
+        ChannelNumber = "2"
+
+        NodeNumber = "0"
+
+    />
+</MountVertexLLamaBase>

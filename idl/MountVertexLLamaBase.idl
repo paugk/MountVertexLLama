@@ -1,0 +1,324 @@
+#ifndef MountVertexLLamaBase_idl
+#define MountVertexLLamaBase_idl
+// ALMA - Atacama Large Millimeter Array
+// (c) European Southern Observatory, 2010
+// (c) Associated Universities Inc., 2010
+// Copyright by ESO (in the framework of the ALMA collaboration),
+// Copyright by AUI (in the framework of the ALMA collaboration),
+// All rights reserved.
+//
+// This library is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public
+// License as published by the Free software Foundation; either
+// version 2.1 of the License, or (at your option) any later version.
+//
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY, without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library; if not, write to the Free Software
+// Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+// MA 02111-1307  USA
+//
+// WARNING! DO NOT MODIFY THIS FILE!
+//  ---------------------------------------------------------
+// | This is generated code!  Do not modify this file.       |
+// | Any changes will be lost when the file is re-generated. |
+//  ---------------------------------------------------------
+//
+// $Id: BaseIDL.xpt 199109 2013-12-18 18:37:52Z rmarson $
+// $Source: /diskb/tmp/stefano/project2/CVS/CONTROL/Common/GenHwDevice/config/templates/amb/BaseIDL.xpt,v $
+//
+
+/// External interface to the hardware assembly: Control::MountVertexLLama.
+
+#include <HardwareDevice.idl>
+#include <ControlExceptions.idl>
+#include <baci.idl>
+
+#include <MountVertex.idl>
+
+#pragma prefix "alma"
+
+module Control
+{
+    /// The purpose of this document is to define the interface between the mount component running in an ABM and the ACU. The ICD provides the interface definitions for all monitor and control points accepted by the ACU as part of the low level functionality which is identified at present for the control of the antenna.
+
+    interface MountVertexLLamaBase: MountVertex
+
+    {
+        /////////////////////
+        // BACI Properties //
+        /////////////////////
+
+        /// Get AZ and EL delta correction applied by the metrology 
+    /// system based on the readout of the sensors at the El encoder 
+    /// mounts
+
+        readonly attribute ACS::ROlongSeq METR_DELTAS_DISP;
+
+        /// Get AZ and EL delta correction applied by the metrology 
+    /// system based on the systematic error model
+
+        readonly attribute ACS::ROlongSeq METR_DELTAS_SPEM;
+
+        /// Get AZ and EL delta correction applied by the metrology 
+    /// system based on the readout of the tiltmeters
+
+        readonly attribute ACS::ROlongSeq METR_DELTAS_TILT;
+
+        /// Get AZ and EL delta correction applied by the metrology 
+    /// system based on the model for temperature compensation of 
+    /// the tiltmeter offset (?tilt offset model?)
+
+        readonly attribute ACS::ROlongSeq METR_DELTAS_TILTTEMP;
+
+        /// Get value of metrology temperature sensor pack 19
+
+        readonly attribute ACS::ROlongSeq METR_TEMPS_19;
+
+        /// Get value of metrology temperature sensor pack 1A
+
+        readonly attribute ACS::ROlongSeq METR_TEMPS_1A;
+
+        /// Get value of metrology temperature sensor pack 1B
+
+        readonly attribute ACS::ROlongSeq METR_TEMPS_1B;
+
+        /// Get value of metrology temperature sensor pack 1C
+
+        readonly attribute ACS::ROlongSeq METR_TEMPS_1C;
+
+        /// Get value of metrology temperature sensor pack 1D
+
+        readonly attribute ACS::ROlongSeq METR_TEMPS_1D;
+
+        /// Get value of metrology temperature sensor pack 1E
+
+        readonly attribute ACS::ROlongSeq METR_TEMPS_1E;
+
+        /// Get value of metrology temperature sensor pack 1F
+
+        readonly attribute ACS::ROlongSeq METR_TEMPS_1F;
+
+        /// Subreflector rotation delta position.
+
+        readonly attribute ACS::ROlongSeq SUBREF_DELTA_ROT;
+
+        /// Cabin and auxiliary status information. Conditions may be 
+    /// Fault conditions (F) or Status information (S). Each condition 
+    /// is marked below; fault conditions require the use of the 
+    /// CLEAR_FAULT_CMD to clear, while status information will 
+    /// clear when the hardware condition is cleared.
+
+        readonly attribute ACS::ROpattern OTHER_STATUS;
+
+        /// UPS2 Alarm status of UPS system. Conditions may be fault 
+    /// conditions or status information. Fault conditions require 
+    /// the use of the CLEAR_FAULT_CMD to clear, while status information 
+    /// will clear when the hardware condition is cleared.
+
+        readonly attribute ACS::ROpattern UPS2_ALARMS;
+
+        /// UPS 2 Battery voltage and current
+
+        readonly attribute ACS::ROlongSeq UPS2_BATTERY_OUTPUT;
+
+        /// UPS 2 Nominal battery autonomy
+
+        readonly attribute ACS::ROlongSeq UPS2_BATTERY_STATUS;
+
+        /// UPS 2 Bypass voltages by phase
+
+        readonly attribute ACS::ROlongSeq UPS2_BYPASS_VOLTS;
+
+        /// UPS 2 Bypass and inverter frequencies
+
+        readonly attribute ACS::ROlongSeq UPS2_FREQS;
+
+        /// UPS 1 Inverter switch position
+
+        readonly attribute ACS::ROlong UPS1_INVERTER_SW;
+
+        /// UPS 2 Inverter switch position
+
+        readonly attribute ACS::ROlong UPS2_INVERTER_SW;
+
+        /// UPS 2 Inverter voltages by phase
+
+        readonly attribute ACS::ROlongSeq UPS2_INVERTER_VOLTS;
+
+        /// UPS 2 Output currents by phase
+
+        readonly attribute ACS::ROlongSeq UPS2_OUTPUT_CURRENT;
+
+        /// UPS 2 Output voltages by phase
+
+        readonly attribute ACS::ROlongSeq UPS2_OUTPUT_VOLTS;
+
+        /// UPS 1 Current status word
+
+        readonly attribute ACS::ROlong UPS_STATUS_1;
+
+        /// UPS 2 Current status word
+
+        readonly attribute ACS::ROlong UPS_STATUS_2;
+
+        ////////////////////////////////////////
+        // IDL Definitions for Monitor Points //
+        ////////////////////////////////////////
+
+        /// emergency stop AZ drives failure / equipment container
+
+        boolean GET_EMERGENCY_STOP_AZ_DRIVES_EQUIP_CONTAINER(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// emergency stop platform 2 failure / receiver cabin
+
+        boolean GET_EMERGENCY_STOP_PLATFORM_2_RECV_CABIN(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// emergency stop Nasmyth cabins A/B
+
+        boolean GET_EMERGENCY_STOP_NASMYTH_CABINS_AB(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// emergency stop access to platform / outside pedestal
+
+        boolean GET_EMERGENCY_STOP_ACESS_TO_PLATFORM_OUTSIDE_PEDESTAL(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// emergency stop control container
+
+        boolean GET_EMERGENCY_STOP_CONTROL_CONTAINER(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// communication error ACU_UPS2
+
+        boolean GET_COMMUNICATION_ERROR_ACU_UPS2(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Get AZ and EL delta correction applied by the metrology 
+    /// system based on the readout of the sensors at the El encoder 
+    /// mounts
+
+        Control::LongSeq GET_METR_DELTAS_DISP(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Get AZ and EL delta correction applied by the metrology 
+    /// system based on the systematic error model
+
+        Control::LongSeq GET_METR_DELTAS_SPEM(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Get AZ and EL delta correction applied by the metrology 
+    /// system based on the readout of the tiltmeters
+
+        Control::LongSeq GET_METR_DELTAS_TILT(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Get AZ and EL delta correction applied by the metrology 
+    /// system based on the model for temperature compensation of 
+    /// the tiltmeter offset (?tilt offset model?)
+
+        Control::LongSeq GET_METR_DELTAS_TILTTEMP(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Get value of metrology temperature sensor pack 19
+
+        Control::LongSeq GET_METR_TEMPS_19(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Get value of metrology temperature sensor pack 1A
+
+        Control::LongSeq GET_METR_TEMPS_1A(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Get value of metrology temperature sensor pack 1B
+
+        Control::LongSeq GET_METR_TEMPS_1B(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Get value of metrology temperature sensor pack 1C
+
+        Control::LongSeq GET_METR_TEMPS_1C(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Get value of metrology temperature sensor pack 1D
+
+        Control::LongSeq GET_METR_TEMPS_1D(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Get value of metrology temperature sensor pack 1E
+
+        Control::LongSeq GET_METR_TEMPS_1E(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Get value of metrology temperature sensor pack 1F
+
+        Control::LongSeq GET_METR_TEMPS_1F(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Subreflector rotation delta position.
+
+        Control::LongSeq GET_SUBREF_DELTA_ROT(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Cabin and auxiliary status information. Conditions may be 
+    /// Fault conditions (F) or Status information (S). Each condition 
+    /// is marked below; fault conditions require the use of the 
+    /// CLEAR_FAULT_CMD to clear, while status information will 
+    /// clear when the hardware condition is cleared.
+
+        long GET_OTHER_STATUS(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// UPS2 Alarm status of UPS system. Conditions may be fault 
+    /// conditions or status information. Fault conditions require 
+    /// the use of the CLEAR_FAULT_CMD to clear, while status information 
+    /// will clear when the hardware condition is cleared.
+
+        Control::LongSeq GET_UPS2_ALARMS(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// UPS 2 Battery voltage and current
+
+        Control::LongSeq GET_UPS2_BATTERY_OUTPUT(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// UPS 2 Nominal battery autonomy
+
+        Control::LongSeq GET_UPS2_BATTERY_STATUS(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// UPS 2 Bypass voltages by phase
+
+        Control::LongSeq GET_UPS2_BYPASS_VOLTS(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// UPS 2 Bypass and inverter frequencies
+
+        Control::LongSeq GET_UPS2_FREQS(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// UPS 1 Inverter switch position
+
+        long GET_UPS1_INVERTER_SW(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// UPS 2 Inverter switch position
+
+        long GET_UPS2_INVERTER_SW(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// UPS 2 Inverter voltages by phase
+
+        Control::LongSeq GET_UPS2_INVERTER_VOLTS(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// UPS 2 Output currents by phase
+
+        Control::LongSeq GET_UPS2_OUTPUT_CURRENT(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// UPS 2 Output voltages by phase
+
+        Control::LongSeq GET_UPS2_OUTPUT_VOLTS(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// UPS 1 Current status word
+
+        long GET_UPS_STATUS_1(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// UPS 2 Current status word
+
+        long GET_UPS_STATUS_2(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        ////////////////////////////////////////
+        // IDL Definitions for Control Points //
+        ////////////////////////////////////////
+
+        /// Set the new subreflector delta position for the tilt axes 
+    /// (will not be accumulated to previous deltas). Delta positions 
+    /// can be commanded when S/R is in A UTO mode.
+        void SET_SUBREF_DELTA_ROT(in Control::LongSeq world) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Terminate ongoing self test.
+        void SET_SELFTEST_STOP() raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+    };
+};
+#endif

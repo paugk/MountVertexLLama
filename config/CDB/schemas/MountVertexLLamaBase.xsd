@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ * ALMA - Atacama Large Millimeter Array
+ * (c) European Southern Observatory, 2002
+ * (c) Associated Universities Inc., 2002
+ * Copyright by ESO (in the framework of the ALMA collaboration),
+ * Copyright by AUI (in the framework of the ALMA collaboration),
+ * All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY, without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ * MA 02111-1307  USA
+ *
+ * Warning!
+ *  =========================================================
+ * | This is generated code!  Do not modify this file.       |
+ * | Any changes will be lost when the file is re-generated. |
+ *  =========================================================
+ *
+ * $Id: CDBSchema.xpt 199109 2013-12-18 18:37:52Z rmarson $
+ *
+-->
+<xs:schema targetNamespace="urn:schemas-cosylab-com:MountVertexLLamaBase:1.0"
+    xmlns="urn:schemas-cosylab-com:MountVertexLLamaBase:1.0"
+    xmlns:amb="urn:schemas-cosylab-com:AmbDevice:1.0"
+    xmlns:baci="urn:schemas-cosylab-com:BACI:1.0"
+    xmlns:cdb="urn:schemas-cosylab-com:CDB:1.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+          xmlns:ext="urn:schemas-cosylab-com:MountVertex:1.0" 
+
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    <xs:import namespace="urn:schemas-cosylab-com:CDB:1.0" schemaLocation="http://www.eso.org/schemas/ACS/CDB.xsd"/>
+    <xs:import namespace="urn:schemas-cosylab-com:BACI:1.0" schemaLocation="http://www.eso.org/schemas/ACS/BACI.xsd"/>
+    <xs:import namespace="urn:schemas-cosylab-com:AmbDevice:1.0" schemaLocation="http://www.nrao.edu/schemas/CONTROL/AmbDevice.xsd"/>
+
+          <xs:import namespace="urn:schemas-cosylab-com:MountVertex:1.0" schemaLocation="http://www.nrao.edu/schemas/CONTROL/MountVertex.xsd"/>
+
+    <xs:complexType name="MountVertexLLamaBase">
+
+        <xs:complexContent>
+        <xs:extension base="ext:MountVertex">
+
+    <xs:sequence>
+
+      <xs:element name="METR_DELTAS_DISP" type ="baci:ROlongSeq"/>
+
+      <xs:element name="METR_DELTAS_SPEM" type ="baci:ROlongSeq"/>
+
+      <xs:element name="METR_DELTAS_TILT" type ="baci:ROlongSeq"/>
+
+      <xs:element name="METR_DELTAS_TILTTEMP" type ="baci:ROlongSeq"/>
+
+      <xs:element name="METR_TEMPS_19" type ="baci:ROlongSeq"/>
+
+      <xs:element name="METR_TEMPS_1A" type ="baci:ROlongSeq"/>
+
+      <xs:element name="METR_TEMPS_1B" type ="baci:ROlongSeq"/>
+
+      <xs:element name="METR_TEMPS_1C" type ="baci:ROlongSeq"/>
+
+      <xs:element name="METR_TEMPS_1D" type ="baci:ROlongSeq"/>
+
+      <xs:element name="METR_TEMPS_1E" type ="baci:ROlongSeq"/>
+
+      <xs:element name="METR_TEMPS_1F" type ="baci:ROlongSeq"/>
+
+      <xs:element name="SUBREF_DELTA_ROT" type ="baci:ROlongSeq"/>
+
+      <xs:element name="OTHER_STATUS" type ="baci:ROpattern"/>
+
+      <xs:element name="UPS2_ALARMS" type ="baci:ROpattern"/>
+
+      <xs:element name="UPS2_BATTERY_OUTPUT" type ="baci:ROlongSeq"/>
+
+      <xs:element name="UPS2_BATTERY_STATUS" type ="baci:ROlongSeq"/>
+
+      <xs:element name="UPS2_BYPASS_VOLTS" type ="baci:ROlongSeq"/>
+
+      <xs:element name="UPS2_FREQS" type ="baci:ROlongSeq"/>
+
+      <xs:element name="UPS1_INVERTER_SW" type ="baci:ROlong"/>
+
+      <xs:element name="UPS2_INVERTER_SW" type ="baci:ROlong"/>
+
+      <xs:element name="UPS2_INVERTER_VOLTS" type ="baci:ROlongSeq"/>
+
+      <xs:element name="UPS2_OUTPUT_CURRENT" type ="baci:ROlongSeq"/>
+
+      <xs:element name="UPS2_OUTPUT_VOLTS" type ="baci:ROlongSeq"/>
+
+      <xs:element name="UPS_STATUS_1" type ="baci:ROlong"/>
+
+      <xs:element name="UPS_STATUS_2" type ="baci:ROlong"/>
+
+    </xs:sequence>
+  </xs:extension>
+ </xs:complexContent>
+</xs:complexType>
+<xs:element name="MountVertexLLamaBase" type="MountVertexLLamaBase"/>
+</xs:schema>

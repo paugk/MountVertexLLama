@@ -1,0 +1,40 @@
+2015-09-30T20:45:54.154 WARNING /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/tmp/ACS_INSTANCE.0 already exists!
+2015-09-30T20:45:54.190 DEBUG Unable to determine the process ID from /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/tmp/ACS_INSTANCE.0/pids/ACS_MANAGER_PID.
+2015-09-30T20:45:54.214 DEBUG Unable to find the process ID for a program using the '3000' TCP port
+2015-09-30T20:45:54.222 DEBUG Unable to determine the process ID from TCP port 3000.
+2015-09-30T20:45:54.234 ERROR Unable to determine manager's process ID.
+2015-09-30T20:45:54.253 DEBUG Unable to determine the process ID from /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/tmp/ACS_INSTANCE.0/pids/ACS_NAMING_SERVICE_PID.
+2015-09-30T20:45:54.271 DEBUG Unable to find the process ID for a program using the '3001' TCP port
+2015-09-30T20:45:54.280 DEBUG Unable to determine the process ID from TCP port 3001.
+2015-09-30T20:45:54.289 ERROR Unable to determine the naming service's process ID.
+2015-09-30T20:45:54.304 DEBUG Unable to determine the process ID from /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/tmp/ACS_INSTANCE.0/pids/ACS_NOTIFY_SERVICE_PID.
+2015-09-30T20:45:54.327 DEBUG Unable to find the process ID for a program using the '3002' TCP port
+2015-09-30T20:45:54.339 DEBUG Unable to determine the process ID from TCP port 3002.
+2015-09-30T20:45:54.352 ERROR Unable to determine the notification service's process ID.
+2015-09-30T20:45:54.368 DEBUG Unable to determine the process ID from /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/tmp/ACS_INSTANCE.0/pids/ACS_LOGGING_SERVICE_PID.
+2015-09-30T20:45:54.389 DEBUG Unable to find the process ID for a program using the '3003' TCP port
+2015-09-30T20:45:54.399 DEBUG Unable to determine the process ID from TCP port 3003.
+2015-09-30T20:45:54.407 ERROR Unable to determine the logging service's process ID.
+2015-09-30T20:45:54.425 DEBUG Unable to determine the process ID from /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/tmp/ACS_INSTANCE.0/pids/ACS_IR_PID.
+2015-09-30T20:45:54.451 DEBUG Unable to find the process ID for a program using the '3004' TCP port
+2015-09-30T20:45:54.465 DEBUG Unable to determine the process ID from TCP port 3004.
+2015-09-30T20:45:54.477 ERROR Unable to determine the interface repository's process ID.
+2015-09-30T20:45:54.491 DEBUG Unable to determine the process ID from /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/tmp/ACS_INSTANCE.0/pids/ACS_LOGGING_NOTIFY_SERVICE_PID.
+2015-09-30T20:45:54.511 DEBUG Unable to find the process ID for a program using the '3005' TCP port
+2015-09-30T20:45:54.521 DEBUG Unable to determine the process ID from TCP port 3005.
+2015-09-30T20:45:54.530 ERROR Unable to determine logging's notify service process ID.
+2015-09-30T20:45:54.548 DEBUG Unable to determine the process ID from /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/tmp/ACS_INSTANCE.0/pids/ACS_ARCHIVE_NOTIFY_SERVICE_PID.
+2015-09-30T20:45:54.571 DEBUG Unable to find the process ID for a program using the '3006' TCP port
+2015-09-30T20:45:54.583 DEBUG Unable to determine the process ID from TCP port 3006.
+2015-09-30T20:45:54.595 ERROR Unable to determine archive notify service's process ID.
+2015-09-30T20:45:54.616 DEBUG Unable to determine the process ID from /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/tmp/ACS_INSTANCE.0/pids/ACS_LOG_SERVICE_PID.
+2015-09-30T20:45:54.635 DEBUG Unable to find the process ID for a program using the '3011' TCP port
+2015-09-30T20:45:54.644 DEBUG Unable to determine the process ID from TCP port 3011.
+2015-09-30T20:45:54.652 ERROR Unable to determine acsLogSvc's process ID.
+2015-09-30T20:45:54.668 DEBUG Unable to determine the process ID from /home/almamgr/alma-src/2014-04-B/CONTROL/Device/HardwareDevice/MOUNT/MountVertexLLama/test/tmp/ACS_INSTANCE.0/pids/ACS_CDB_PID.
+2015-09-30T20:45:54.690 DEBUG Unable to find the process ID for a program using the '3012' TCP port
+2015-09-30T20:45:54.702 DEBUG Unable to determine the process ID from TCP port 3012.
+2015-09-30T20:45:54.717 ERROR Unable to determine CDB's process ID.
+2015-09-30T20:45:54.730 DEBUG All ACS processes appear to be dead for ACS_INSTANCE=0
+2015-09-30T20:45:54.817 INFO Starting ACS version 2014.4.1
+2015-09-30T20:45:54.832 INFO Using ALMA Base Software tag 2014-04-ACS-B

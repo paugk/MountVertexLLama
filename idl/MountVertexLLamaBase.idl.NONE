@@ -1,0 +1,93 @@
+#ifndef MountVertexLLamaBase_idl
+#define MountVertexLLamaBase_idl
+// ALMA - Atacama Large Millimeter Array
+// (c) European Southern Observatory, 2010
+// (c) Associated Universities Inc., 2010
+// Copyright by ESO (in the framework of the ALMA collaboration),
+// Copyright by AUI (in the framework of the ALMA collaboration),
+// All rights reserved.
+//
+// This library is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public
+// License as published by the Free software Foundation; either
+// version 2.1 of the License, or (at your option) any later version.
+//
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY, without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library; if not, write to the Free Software
+// Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+// MA 02111-1307  USA
+//
+// WARNING! DO NOT MODIFY THIS FILE!
+//  ---------------------------------------------------------
+// | This is generated code!  Do not modify this file.       |
+// | Any changes will be lost when the file is re-generated. |
+//  ---------------------------------------------------------
+//
+// $Id: BaseIDL.xpt 199109 2013-12-18 18:37:52Z rmarson $
+// $Source: /diskb/tmp/stefano/project2/CVS/CONTROL/Common/GenHwDevice/config/templates/amb/BaseIDL.xpt,v $
+//
+
+/// External interface to the hardware assembly: Control::MountVertexLLama.
+
+#include <HardwareDevice.idl>
+#include <ControlExceptions.idl>
+#include <baci.idl>
+
+#include <MountVertex.idl>
+
+#pragma prefix "alma"
+
+module Control
+{
+    /// The purpose of this document is to define the interface between the mount component running in an ABM and the ACU. The ICD provides the interface definitions for all monitor and control points accepted by the ACU as part of the low level functionality which is identified at present for the control of the antenna.
+
+    interface MountVertexLLamaBase: MountVertex
+
+    {
+        /////////////////////
+        // BACI Properties //
+        /////////////////////
+
+        /// Get AZ and EL delta correction applied by the metrology 
+    /// system based on the readout of the sensors at the El encoder 
+    /// mounts
+
+        readonly attribute ACS::ROlongSeq METR_DELTAS_DISP;
+
+        ////////////////////////////////////////
+        // IDL Definitions for Monitor Points //
+        ////////////////////////////////////////
+
+        /// Get AZ and EL delta correction applied by the metrology 
+    /// system based on the readout of the sensors at the El encoder 
+    /// mounts
+
+        Control::LongSeq GET_METR_DELTAS_DISP(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Azimuth delta correction applied by the metrology system 
+    /// based on the readout of the sensors at the El encoder mounts
+
+        long GET_METR_DELTAS_DISP_AZ_CORRECTION(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        /// Elevation delta correction applied by the metrology system 
+    /// based on the readout of the sensors at the El encoder mounts
+
+        long GET_METR_DELTAS_DISP_EL_CORRECTION(out ACS::Time timestamp) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+        ////////////////////////////////////////
+        // IDL Definitions for Control Points //
+        ////////////////////////////////////////
+
+        /// Set the new subreflector delta position for the tilt axes 
+    /// (will not be accumulated to previous deltas). Delta positions 
+    /// can be commanded when S/R is in A UTO mode.
+        void SET_SUBREF_DELTA_ROT(in Control::LongSeq world) raises(ControlExceptions::CAMBErrorEx, ControlExceptions::INACTErrorEx);
+
+    };
+};
+#endif
